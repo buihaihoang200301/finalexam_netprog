@@ -48,7 +48,8 @@ int main(){
     struct pollfd pollfd;
     pollfd.fd = fileno(stdin);
     pollfd.events = POLLIN;
-
+    
+    printf("Waitting for connection\n");
     while (1)
     {
         clientfd = accept(sockfd, (struct sockaddr *)&caddr, &clen);
